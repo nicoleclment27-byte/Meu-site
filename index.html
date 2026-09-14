@@ -14,7 +14,7 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
-    --cor-principal: #FF7A00;
+    --cor-principal: ##952319;
     --cor-fundo-claro: #faf5f4;
     --fonte-titulo: 'Space Mono', 'Courier New', monospace;
     --fonte-texto: 'Newsreader', 'Segoe UI', Arial, sans-serif;
@@ -162,8 +162,61 @@
     </ul>
   </div>
 </section>
+<!-- QUALIFICAÇÕES -->
+<section id="qualificacoes" class="qualificacoes-container">
+  <h2>Formação & Qualificações</h2>
+  <p class="subtitulo">Aprendizado contínuo para entregar sempre o melhor</p>
 
-<section id="servicos" class="servicos-container">
+  <div class="qualificacoes-grid">
+    <div class="qualificacao-card">
+      <h3> Especialização</h3>
+      <p>UX Design — ESPM <br><span class="qualificacao-data">Conclusão prevista: Out/2026</span></p>
+    </div>
+
+    <div class="qualificacao-card">
+      <h3> Certificações — SENAI</h3>
+      <p>
+        Roteiro de Vídeos (2026)<br>
+        Controle e Acompanhamento de Desempenho em Redes Sociais (2026)<br>
+        Adobe Photoshop (2025)<br>
+        Fotografia Digital (2026)<br>
+        Design de Marca (2026)<br>
+        Design de Interface Web (2026)
+      </p>
+    </div>
+
+    <div class="qualificacao-card">
+      <h3> Internacional</h3>
+      <p>Marketing Digital — The University of Chicago <br><span class="qualificacao-data">via Santander</span></p>
+    </div>
+  </div>
+</section>
+
+<section id="servicos" class="servicos-container">.qualificacoes-container { text-align: center; padding: 60px 20px; background: var(--cor-fundo-claro); }
+.qualificacoes-container h2 { color: var(--cor-principal); margin-bottom: 10px; }
+.qualificacoes-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; }
+.qualificacao-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 25px;
+  width: 280px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: left;
+  transition: transform 0.2s;
+}
+.qualificacao-card:hover { transform: translateY(-5px); }
+.qualificacao-card h3 { color: var(--cor-principal); font-size: 16px; margin-bottom: 12px; }
+.qualificacao-card p { font-size: 14px; color: #555; line-height: 1.8; }
+.qualificacao-data { font-size: 13px; color: #999; font-style: italic; }
+<nav>
+  <a href="#sobre">Sobre</a>
+  <a href="#qualificacoes">Qualificações</a>
+  <a href="#servicos">Serviços</a>
+  <a href="#trabalhos">Trabalhos</a>
+  <a href="#depoimentos">Depoimentos</a>
+  <a href="#contato">Contato</a>
+</nav>
+
   <h2>Serviços</h2>
   <p class="subtitulo">Soluções completas para fortalecer a presença digital da sua marca</p>
   <div class="servicos-grid">
