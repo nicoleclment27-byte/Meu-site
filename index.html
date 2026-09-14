@@ -14,7 +14,8 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
-    --cor-principal: ##952319;
+    --cor-principal: #952319;
+    --cor-destaque: #FF7A00;
     --cor-fundo-claro: #faf5f4;
     --fonte-titulo: 'Space Mono', 'Courier New', monospace;
     --fonte-texto: 'Newsreader', 'Segoe UI', Arial, sans-serif;
@@ -55,6 +56,24 @@
   .sobre-info { list-style: none; margin-top: 15px; }
   .sobre-info li { margin-bottom: 8px; }
 
+  /* QUALIFICAÇÕES */
+  .qualificacoes-container { text-align: center; padding: 60px 20px; background: var(--cor-fundo-claro); }
+  .qualificacoes-container h2 { color: var(--cor-principal); margin-bottom: 10px; }
+  .qualificacoes-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; margin-top: 30px; }
+  .qualificacao-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px 25px;
+    width: 280px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: left;
+    transition: transform 0.2s;
+  }
+  .qualificacao-card:hover { transform: translateY(-5px); }
+  .qualificacao-card h3 { color: var(--cor-principal); font-size: 16px; margin-bottom: 12px; }
+  .qualificacao-card p { font-size: 14px; color: #555; line-height: 1.8; }
+  .qualificacao-data { font-size: 13px; color: #999; font-style: italic; }
+
   .servicos-container { text-align: center; padding: 60px 20px; background: var(--cor-fundo-claro); }
   .servicos-container h2 { color: var(--cor-principal); margin-bottom: 10px; }
   .subtitulo { color: #666; margin-bottom: 40px; }
@@ -70,7 +89,7 @@
 
   .btn-interesse {
     display: inline-block; margin-top: 20px; padding: 10px 18px;
-    background: var(--cor-principal); color: #fff; text-decoration: none;
+    background: var(--cor-destaque); color: #fff; text-decoration: none;
     border-radius: 8px; font-size: 14px; text-align: center; transition: background 0.2s;
   }
   .btn-interesse:hover { background: #000; }
@@ -100,7 +119,7 @@
   .contato-container { text-align: center; padding: 60px 20px; }
   .contato-container h2 { color: var(--cor-principal); margin-bottom: 15px; }
   .btn-whatsapp {
-    display: inline-block; background: #25D366; color: #fff; padding: 14px 30px;
+    display: inline-block; background: var(--cor-destaque); color: #fff; padding: 14px 30px;
     border-radius: 30px; text-decoration: none; font-weight: bold; margin-top: 15px; font-size: 16px;
   }
 
@@ -132,6 +151,7 @@
   <div class="logo">Nicole Clemente</div>
   <nav>
     <a href="#sobre">Sobre</a>
+    <a href="#qualificacoes">Qualificações</a>
     <a href="#servicos">Serviços</a>
     <a href="#trabalhos">Trabalhos</a>
     <a href="#depoimentos">Depoimentos</a>
@@ -162,6 +182,7 @@
     </ul>
   </div>
 </section>
+
 <!-- QUALIFICAÇÕES -->
 <section id="qualificacoes" class="qualificacoes-container">
   <h2>Formação & Qualificações</h2>
@@ -169,12 +190,12 @@
 
   <div class="qualificacoes-grid">
     <div class="qualificacao-card">
-      <h3> Especialização</h3>
+      <h3>🎓 Graduação</h3>
       <p>UX Design — ESPM <br><span class="qualificacao-data">Conclusão prevista: Out/2026</span></p>
     </div>
 
     <div class="qualificacao-card">
-      <h3> Certificações — SENAI</h3>
+      <h3>📜 Certificações — SENAI</h3>
       <p>
         Roteiro de Vídeos (2026)<br>
         Controle e Acompanhamento de Desempenho em Redes Sociais (2026)<br>
@@ -186,64 +207,40 @@
     </div>
 
     <div class="qualificacao-card">
-      <h3> Internacional</h3>
+      <h3>🌎 Internacional</h3>
       <p>Marketing Digital — The University of Chicago <br><span class="qualificacao-data">via Santander</span></p>
     </div>
   </div>
 </section>
 
-<section id="servicos" class="servicos-container">.qualificacoes-container { text-align: center; padding: 60px 20px; background: var(--cor-fundo-claro); }
-.qualificacoes-container h2 { color: var(--cor-principal); margin-bottom: 10px; }
-.qualificacoes-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; }
-.qualificacao-card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 30px 25px;
-  width: 280px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  text-align: left;
-  transition: transform 0.2s;
-}
-.qualificacao-card:hover { transform: translateY(-5px); }
-.qualificacao-card h3 { color: var(--cor-principal); font-size: 16px; margin-bottom: 12px; }
-.qualificacao-card p { font-size: 14px; color: #555; line-height: 1.8; }
-.qualificacao-data { font-size: 13px; color: #999; font-style: italic; }
-<nav>
-  <a href="#sobre">Sobre</a>
-  <a href="#qualificacoes">Qualificações</a>
-  <a href="#servicos">Serviços</a>
-  <a href="#trabalhos">Trabalhos</a>
-  <a href="#depoimentos">Depoimentos</a>
-  <a href="#contato">Contato</a>
-</nav>
-
+<section id="servicos" class="servicos-container">
   <h2>Serviços</h2>
   <p class="subtitulo">Soluções completas para fortalecer a presença digital da sua marca</p>
   <div class="servicos-grid">
     <div class="servico-card">
       <h3>Gestão de Redes</h3>
       <p>Planejamento, criação e gestão de conteúdo para fortalecer a presença da sua marca nas redes sociais.</p>
-      <a href="https://wa.me/5511999999999?text=Olá! Tenho interesse no serviço de Gestão de Redes" class="btn-interesse" target="_blank">Tenho interesse</a>
+      <a href="https://wa.me/5511988333262?text=Olá! Tenho interesse no serviço de Gestão de Redes" class="btn-interesse" target="_blank">Tenho interesse</a>
     </div>
     <div class="servico-card">
       <h3>Videomaker</h3>
       <p>Captação e edição de vídeos para transformar ideias, produtos e momentos em conteúdos que conectam.</p>
-      <a href="https://wa.me/5511999999999?text=Olá! Tenho interesse no serviço de Videomaker" class="btn-interesse" target="_blank">Tenho interesse</a>
+      <a href="https://wa.me/5511988333262?text=Olá! Tenho interesse no serviço de Videomaker" class="btn-interesse" target="_blank">Tenho interesse</a>
     </div>
     <div class="servico-card">
       <h3>Storymaker</h3>
       <p>Cobertura de eventos e criação de Stories em tempo real, registrando os melhores momentos de forma espontânea e estratégica.</p>
-      <a href="https://wa.me/5511999999999?text=Olá! Tenho interesse no serviço de Storymaker" class="btn-interesse" target="_blank">Tenho interesse</a>
+      <a href="https://wa.me/5511988333262?text=Olá! Tenho interesse no serviço de Storymaker" class="btn-interesse" target="_blank">Tenho interesse</a>
     </div>
     <div class="servico-card">
       <h3>Design</h3>
       <p>Criação de peças visuais para redes sociais e materiais digitais, alinhadas à comunicação da marca.</p>
-      <a href="https://wa.me/5511999999999?text=Olá! Tenho interesse no serviço de Design" class="btn-interesse" target="_blank">Tenho interesse</a>
+      <a href="https://wa.me/5511988333262?text=Olá! Tenho interesse no serviço de Design" class="btn-interesse" target="_blank">Tenho interesse</a>
     </div>
     <div class="servico-card">
       <h3>Identidade Visual</h3>
       <p>Criação de uma identidade visual que traduz a essência da marca e traz consistência para sua comunicação.</p>
-      <a href="https://wa.me/5511999999999?text=Olá! Tenho interesse no serviço de Identidade Visual" class="btn-interesse" target="_blank">Tenho interesse</a>
+      <a href="https://wa.me/5511988333262?text=Olá! Tenho interesse no serviço de Identidade Visual" class="btn-interesse" target="_blank">Tenho interesse</a>
     </div>
   </div>
 </section>
@@ -288,7 +285,7 @@
 <section id="contato" class="contato-container">
   <h2>Vamos trabalhar juntos?</h2>
   <p>Fale comigo agora mesmo pelo WhatsApp</p>
-  <a href="https://wa.me/5511988333262" class="btn-whatsapp" target="_blank">Falar no WhatsApp</a>
+  <a href="https://wa.me/5511999999999" class="btn-whatsapp" target="_blank">Falar no WhatsApp</a>
 </section>
 
 <div class="redes-sociais">
