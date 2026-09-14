@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Nicole Clemente - Social Media, Videomaker e Storymaker. Conteúdo com propósito para fortalecer sua marca.">
 <title>Nicole Clemente | Social Media & Videomaker</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,6 +13,8 @@
 
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
 
   :root {
     --cor-principal: #952319;
@@ -88,35 +91,33 @@
   .subtitulo { color: #666; margin-bottom: 40px; font-family: var(--fonte-texto); }
   .servicos-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; }
   .servico-card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 30px 25px;
-  width: 260px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-}
-.servico-card:hover { transform: translateY(-5px); }
-.servico-card h3 { color: var(--cor-principal); font-size: 17px; margin-bottom: 10px; }
-.servico-card p { font-size: 15px; color: #555; flex: 1; }
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px 25px;
+    width: 260px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+  .servico-card:hover { transform: translateY(-5px); }
+  .servico-card h3 { color: var(--cor-principal); font-size: 17px; margin-bottom: 10px; }
+  .servico-card p { font-size: 15px; color: #555; flex: 1; }
 
-.btn-interesse {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 18px;
-  background: #FF7A00;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 8px;
-  font-size: 14px;
-  text-align: center;
-  transition: background 0.2s;
-}
-.btn-interesse:hover {
-  background: #e56900;
-}
+  .btn-interesse {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 18px;
+    background: #FF7A00;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+    transition: background 0.2s;
+  }
+  .btn-interesse:hover { background: #e56900; }
 
   /* QUALIFICAÇÕES */
   .qualificacoes-container {
@@ -159,8 +160,14 @@
     font-family: var(--fonte-texto);
   }
   .filtro-btn.ativo, .filtro-btn:hover { background: var(--cor-principal); color: #fff; }
-  .trabalhos-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
-  .trabalho-item video { width: 260px; border-radius: 12px; }
+  .trabalhos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .trabalho-item video { width: 100%; border-radius: 12px; }
 
   /* DEPOIMENTOS */
   .depoimentos-container { padding: 60px 20px; text-align: center; background: var(--cor-fundo-claro); }
@@ -219,7 +226,7 @@
 <!-- MENU -->
 <header>
   <div class="logo">Nicole Clemente</div>
-  <nav>
+  <nav aria-label="Menu principal">
     <a href="#sobre">Sobre</a>
     <a href="#servicos">Serviços</a>
     <a href="#qualificacoes">Qualificações</a>
@@ -238,7 +245,7 @@
 <!-- SOBRE -->
 <section id="sobre" class="sobre-container">
   <div class="sobre-foto">
-    <img src="images/foto-perfil.jpg" alt="Nicole Clemente" />
+    <img src="images/foto-perfil.jpg" alt="Foto de Nicole Clemente" />
   </div>
   <div class="sobre-texto">
     <h2>Sobre mim</h2>
@@ -248,9 +255,9 @@
     <p>Minha trajetória é movida por curiosidade, criatividade e aprendizado constante. Estou sempre buscando novas referências, ferramentas e formas de fazer melhor.</p>
     <p>Acredito que cada projeto é uma oportunidade de criar algo que faça sentido, conecte pessoas e fortaleça marcas.</p>
     <ul class="sobre-info">
-      <li>São Caetano do Sul, SP</li>
-      <li> Português e Inglês</li>
-      <li> Instagram, TikTok, YouTube Shorts, LinkedIn</li>
+      <li><i class="fas fa-map-marker-alt"></i> São Caetano do Sul, SP</li>
+      <li><i class="fas fa-globe"></i> Português e Inglês</li>
+      <li><i class="fas fa-hashtag"></i> Instagram, TikTok, YouTube Shorts, LinkedIn</li>
     </ul>
   </div>
 </section>
@@ -258,32 +265,37 @@
 <!-- SERVIÇOS -->
 <section id="servicos" class="servicos-container">
   <h2>Serviços</h2>
-  <p class="subtitulo">Soluções completas para fortalecer a presença digital da sua marca </p>
+  <p class="subtitulo">Soluções completas para fortalecer a presença digital da sua marca</p>
 
   <div class="servicos-grid">
     <div class="servico-card">
       <h3>Gestão de Redes</h3>
       <p>Planejamento, criação e gestão de conteúdo para fortalecer a presença da sua marca nas redes sociais.</p>
+      <a href="#contato" class="btn-interesse">Quero saber mais</a>
     </div>
 
     <div class="servico-card">
       <h3>Videomaker</h3>
       <p>Captação e edição de vídeos para transformar ideias, produtos e momentos em conteúdos que conectam.</p>
+      <a href="#contato" class="btn-interesse">Quero saber mais</a>
     </div>
 
     <div class="servico-card">
       <h3>Storymaker</h3>
       <p>Cobertura de eventos e criação de Stories em tempo real, registrando os melhores momentos de forma espontânea e estratégica.</p>
+      <a href="#contato" class="btn-interesse">Quero saber mais</a>
     </div>
 
     <div class="servico-card">
       <h3>Design</h3>
       <p>Criação de peças visuais para redes sociais e materiais digitais, alinhadas à comunicação da marca.</p>
+      <a href="#contato" class="btn-interesse">Quero saber mais</a>
     </div>
 
     <div class="servico-card">
       <h3>Identidade Visual</h3>
       <p>Criação de uma identidade visual que traduz a essência da marca e traz consistência para sua comunicação.</p>
+      <a href="#contato" class="btn-interesse">Quero saber mais</a>
     </div>
   </div>
 </section>
@@ -316,13 +328,13 @@
 
   <div class="trabalhos-grid">
     <div class="trabalho-item" data-categoria="reels">
-      <video src="videos/reel1.mp4" controls></video>
+      <video src="videos/reel1.mp4" controls preload="metadata"></video>
     </div>
     <div class="trabalho-item" data-categoria="institucional">
-      <video src="videos/institucional1.mp4" controls></video>
+      <video src="videos/institucional1.mp4" controls preload="metadata"></video>
     </div>
     <div class="trabalho-item" data-categoria="ecommerce">
-      <video src="videos/ecommerce1.mp4" controls></video>
+      <video src="videos/ecommerce1.mp4" controls preload="metadata"></video>
     </div>
   </div>
 </section>
@@ -332,12 +344,12 @@
   <h2>O que dizem meus clientes</h2>
   <div class="depoimentos-grid">
     <div class="depoimento-card">
-      <img src="images/print-cliente1.png" alt="Depoimento cliente 1" class="print" />
+      <img src="images/print-cliente1.png" alt="Depoimento de Maria Silva" class="print" loading="lazy" />
       <p class="cliente-nome">Maria Silva</p>
       <p class="cliente-cargo">Gerente de Marketing — Empresa X</p>
     </div>
     <div class="depoimento-card">
-      <img src="images/print-cliente2.png" alt="Depoimento cliente 2" class="print" />
+      <img src="images/print-cliente2.png" alt="Depoimento de João Souza" class="print" loading="lazy" />
       <p class="cliente-nome">João Souza</p>
       <p class="cliente-cargo">Fundador — Empresa Y</p>
     </div>
@@ -348,15 +360,15 @@
 <section id="contato" class="contato-container">
   <h2>Vamos trabalhar juntos?</h2>
   <p>Fale comigo agora mesmo pelo WhatsApp</p>
-  <a href="https://wa.me/5511988333262" class="btn-whatsapp" target="_blank"> Falar no WhatsApp</a>
+  <a href="https://wa.me/5511988333262" class="btn-whatsapp" target="_blank" rel="noopener">Falar no WhatsApp</a>
 </section>
 
 <!-- REDES SOCIAIS FLUTUANTES -->
 <div class="redes-sociais">
-  <a href="https://www.instagram.com/hey.niclmnet?stkn=cHYwbTB6ZTd6enRp&utm_source=qr" target="_blank" aria-label="Instagram">
+  <a href="https://www.instagram.com/hey.niclmnet?stkn=cHYwbTB6ZTd6enRp&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram">
     <i class="fab fa-instagram"></i>
   </a>
-  <a href="https://www.linkedin.com/in/nicoleclment777?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" aria-label="LinkedIn">
+  <a href="https://www.linkedin.com/in/nicoleclment777?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener" aria-label="LinkedIn">
     <i class="fab fa-linkedin-in"></i>
   </a>
 </div>
