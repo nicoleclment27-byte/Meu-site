@@ -8,27 +8,21 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
-    --cor-principal: #952319;
+    --cor-principal: #FF7A00;
     --cor-fundo-claro: #faf5f4;
     --fonte-titulo: 'Space Mono', 'Courier New', monospace;
     --fonte-texto: 'Newsreader', 'Segoe UI', Arial, sans-serif;
   }
 
-  body {
-    font-family: var(--fonte-texto);
-    color: #333;
-    line-height: 1.6;
-  }
-  h1, h2, h3, .logo {
-    font-family: var(--fonte-titulo);
-  }
+  body { font-family: var(--fonte-texto); color: #333; line-height: 1.6; }
+  h1, h2, h3, .logo { font-family: var(--fonte-titulo); }
 
-  /* MENU */
   header {
     background: var(--cor-principal);
     padding: 15px 30px;
@@ -40,39 +34,19 @@
     z-index: 1000;
   }
   header .logo { color: #fff; font-size: 22px; font-weight: bold; }
-  header nav a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 15px;
-    font-family: var(--fonte-texto);
-  }
+  header nav a { color: #fff; text-decoration: none; margin-left: 20px; font-size: 15px; }
   header nav a:hover { text-decoration: underline; }
 
-  /* HERO */
-  .hero {
-    background: var(--cor-fundo-claro);
-    text-align: center;
-    padding: 80px 20px;
-  }
+  .hero { background: var(--cor-fundo-claro); text-align: center; padding: 80px 20px; }
   .hero h1 { font-size: 32px; color: var(--cor-principal); margin-bottom: 10px; }
-  .hero p { font-size: 18px; color: #555; font-family: var(--fonte-texto); }
+  .hero p { font-size: 18px; color: #555; }
 
-  /* SOBRE */
   .sobre-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 40px;
-    max-width: 1100px;
-    margin: 60px auto;
-    padding: 0 20px;
+    display: flex; flex-wrap: wrap; align-items: center; gap: 40px;
+    max-width: 1100px; margin: 60px auto; padding: 0 20px;
   }
   .sobre-foto img {
-    width: 260px;
-    height: 260px;
-    object-fit: cover;
-    border-radius: 50%;
+    width: 260px; height: 260px; object-fit: cover; border-radius: 50%;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   }
   .sobre-texto { flex: 1; min-width: 280px; }
@@ -81,97 +55,69 @@
   .sobre-info { list-style: none; margin-top: 15px; }
   .sobre-info li { margin-bottom: 8px; }
 
-  /* SERVIÇOS */
   .servicos-container { text-align: center; padding: 60px 20px; background: var(--cor-fundo-claro); }
   .servicos-container h2 { color: var(--cor-principal); margin-bottom: 10px; }
-  .subtitulo { color: #666; margin-bottom: 40px; font-family: var(--fonte-texto); }
+  .subtitulo { color: #666; margin-bottom: 40px; }
   .servicos-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; }
   .servico-card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 30px 25px;
-  width: 260px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-}
-.servico-card:hover { transform: translateY(-5px); }
-.servico-card h3 { color: var(--cor-principal); font-size: 17px; margin-bottom: 10px; }
-.servico-card p { font-size: 15px; color: #555; flex: 1; }
+    background: #fff; border-radius: 16px; padding: 30px 25px; width: 260px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.2s;
+    text-align: left; display: flex; flex-direction: column;
+  }
+  .servico-card:hover { transform: translateY(-5px); }
+  .servico-card h3 { color: var(--cor-principal); font-size: 17px; margin-bottom: 10px; }
+  .servico-card p { font-size: 15px; color: #555; flex: 1; }
 
-.btn-interesse {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 18px;
-  background: var(--cor-principal);
-  color: #fff;
-  text-decoration: none;
-  border-radius: 8px;
-  font-size: 14px;
-  text-align: center;
-  transition: background 0.2s;
-}
-.btn-interesse:hover {
-  background: #000; /* ou outra cor de destaque que combine com sua marca */
-}
-  /* TRABALHOS */
+  .btn-interesse {
+    display: inline-block; margin-top: 20px; padding: 10px 18px;
+    background: var(--cor-principal); color: #fff; text-decoration: none;
+    border-radius: 8px; font-size: 14px; text-align: center; transition: background 0.2s;
+  }
+  .btn-interesse:hover { background: #000; }
+
   .trabalhos-container { padding: 60px 20px; text-align: center; }
   .trabalhos-container h2 { color: var(--cor-principal); margin-bottom: 30px; }
   .filtros { margin-bottom: 30px; }
   .filtro-btn {
     border: none; background: #eee; padding: 8px 18px; margin: 0 5px;
     border-radius: 20px; cursor: pointer; transition: background 0.2s;
-    font-family: var(--fonte-texto);
   }
   .filtro-btn.ativo, .filtro-btn:hover { background: var(--cor-principal); color: #fff; }
   .trabalhos-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
   .trabalho-item video { width: 260px; border-radius: 12px; }
 
-  /* DEPOIMENTOS */
   .depoimentos-container { padding: 60px 20px; text-align: center; background: var(--cor-fundo-claro); }
   .depoimentos-container h2 { color: var(--cor-principal); margin-bottom: 30px; }
   .depoimentos-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; }
   .depoimento-card {
-    background: #fff; border-radius: 12px; padding: 15px;
-    width: 280px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background: #fff; border-radius: 12px; padding: 15px; width: 280px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
   .print { width: 100%; border-radius: 8px; margin-bottom: 12px; }
   .cliente-nome { font-weight: bold; }
   .cliente-cargo { font-size: 13px; color: #777; }
 
-  /* CONTATO */
   .contato-container { text-align: center; padding: 60px 20px; }
   .contato-container h2 { color: var(--cor-principal); margin-bottom: 15px; }
   .btn-whatsapp {
-    display: inline-block; background: #25D366; color: #fff;
-    padding: 14px 30px; border-radius: 30px; text-decoration: none;
-    font-weight: bold; margin-top: 15px; font-size: 16px;
-    font-family: var(--fonte-texto);
+    display: inline-block; background: #25D366; color: #fff; padding: 14px 30px;
+    border-radius: 30px; text-decoration: none; font-weight: bold; margin-top: 15px; font-size: 16px;
   }
 
-  /* REDES SOCIAIS FLUTUANTES */
   .redes-sociais {
-    position: fixed; bottom: 20px; left: 20px;
-    display: flex; gap: 10px; z-index: 999;
+    position: fixed; bottom: 20px; left: 20px; display: flex; gap: 10px; z-index: 999;
   }
   .redes-sociais a {
-    background: var(--cor-principal); color: #fff;
-    width: 45px; height: 45px;
-    display: flex; align-items: center; justify-content: center;
-    border-radius: 50%; text-decoration: none; font-size: 20px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    background: var(--cor-principal); color: #fff; width: 45px; height: 45px;
+    display: flex; align-items: center; justify-content: center; border-radius: 50%;
+    text-decoration: none; font-size: 20px; box-shadow: 0 3px 8px rgba(0,0,0,0.2);
     transition: transform 0.2s;
   }
   .redes-sociais a:hover { transform: scale(1.1); }
 
-  /* FOOTER */
   footer {
-    background: var(--cor-principal); color: #fff;
-    text-align: center; padding: 20px;
-    font-size: 14px;
-    font-family: var(--fonte-texto);
+    background: var(--cor-principal); color: #fff; text-align: center;
+    padding: 20px; font-size: 14px;
   }
 
   @media (max-width: 600px) {
@@ -182,9 +128,7 @@
 </head>
 <body>
 
-<!-- MENU -->
 <header>
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <div class="logo">Nicole Clemente</div>
   <nav>
     <a href="#sobre">Sobre</a>
@@ -195,13 +139,11 @@
   </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
   <h1>Conteúdo com propósito, de ponta a ponta</h1>
   <p>Social Media, Videomaker e Storymaker</p>
 </section>
 
-<!-- SOBRE -->
 <section id="sobre" class="sobre-container">
   <div class="sobre-foto">
     <img src="images/foto-perfil.jpg" alt="Nicole Clemente" />
@@ -215,56 +157,52 @@
     <p>Acredito que cada projeto é uma oportunidade de criar algo que faça sentido, conecte pessoas e fortaleça marcas.</p>
     <ul class="sobre-info">
       <li>São Caetano do Sul, SP</li>
-      <li> Português e Inglês</li>
-      <li> Instagram, TikTok, YouTube Shorts, LinkedIn</li>
+      <li>Português e Inglês</li>
+      <li>Instagram, TikTok, YouTube Shorts, LinkedIn</li>
     </ul>
   </div>
 </section>
 
-<!-- SERVIÇOS -->
 <section id="servicos" class="servicos-container">
   <h2>Serviços</h2>
-  <p class="subtitulo">Soluções completas para fortalecer a presença digital da sua marca </p>
-
+  <p class="subtitulo">Soluções completas para fortalecer a presença digital da sua marca</p>
   <div class="servicos-grid">
     <div class="servico-card">
       <h3>Gestão de Redes</h3>
       <p>Planejamento, criação e gestão de conteúdo para fortalecer a presença da sua marca nas redes sociais.</p>
+      <a href="https://wa.me/5511999999999?text=Olá! Tenho interesse no serviço de Gestão de Redes" class="btn-interesse" target="_blank">Tenho interesse</a>
     </div>
-
     <div class="servico-card">
       <h3>Videomaker</h3>
       <p>Captação e edição de vídeos para transformar ideias, produtos e momentos em conteúdos que conectam.</p>
+      <a href="https://wa.me/5511999999999?text=Olá! Tenho interesse no serviço de Videomaker" class="btn-interesse" target="_blank">Tenho interesse</a>
     </div>
-
     <div class="servico-card">
       <h3>Storymaker</h3>
       <p>Cobertura de eventos e criação de Stories em tempo real, registrando os melhores momentos de forma espontânea e estratégica.</p>
+      <a href="https://wa.me/5511999999999?text=Olá! Tenho interesse no serviço de Storymaker" class="btn-interesse" target="_blank">Tenho interesse</a>
     </div>
-
     <div class="servico-card">
       <h3>Design</h3>
       <p>Criação de peças visuais para redes sociais e materiais digitais, alinhadas à comunicação da marca.</p>
+      <a href="https://wa.me/5511999999999?text=Olá! Tenho interesse no serviço de Design" class="btn-interesse" target="_blank">Tenho interesse</a>
     </div>
-
     <div class="servico-card">
       <h3>Identidade Visual</h3>
       <p>Criação de uma identidade visual que traduz a essência da marca e traz consistência para sua comunicação.</p>
+      <a href="https://wa.me/5511999999999?text=Olá! Tenho interesse no serviço de Identidade Visual" class="btn-interesse" target="_blank">Tenho interesse</a>
     </div>
   </div>
 </section>
 
-<!-- TRABALHOS -->
 <section id="trabalhos" class="trabalhos-container">
   <h2>Meus Trabalhos</h2>
-
   <div class="filtros">
     <button class="filtro-btn ativo" data-categoria="todos">Todos</button>
     <button class="filtro-btn" data-categoria="reels">Reels</button>
     <button class="filtro-btn" data-categoria="institucional">Institucional</button>
     <button class="filtro-btn" data-categoria="ecommerce">E-commerce</button>
   </div>
-
   <div class="trabalhos-grid">
     <div class="trabalho-item" data-categoria="reels">
       <video src="videos/reel1.mp4" controls></video>
@@ -278,7 +216,6 @@
   </div>
 </section>
 
-<!-- DEPOIMENTOS -->
 <section id="depoimentos" class="depoimentos-container">
   <h2>O que dizem meus clientes</h2>
   <div class="depoimentos-grid">
@@ -295,17 +232,19 @@
   </div>
 </section>
 
-<!-- CONTATO -->
 <section id="contato" class="contato-container">
   <h2>Vamos trabalhar juntos?</h2>
   <p>Fale comigo agora mesmo pelo WhatsApp</p>
-  <a href="https://wa.me/55SEUNUMERO" class="btn-whatsapp" target="_blank"> Falar no WhatsApp</a>
+  <a href="https://wa.me/5511988333262" class="btn-whatsapp" target="_blank">Falar no WhatsApp</a>
 </section>
 
-<!-- REDES SOCIAIS FLUTUANTES -->
 <div class="redes-sociais">
-  <a href="https://instagram.com/@nicoleclmnet" target="_blank"></a>
-  <a href="https://linkedin.com/in/seulinkedin" target="_blank"></a>
+  <a href="https://instagram.com/nicoleclmnet" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://linkedin.com/in/seulinkedin" target="_blank" aria-label="LinkedIn">
+    <i class="fab fa-linkedin"></i>
+  </a>
 </div>
 
 <footer>
@@ -318,7 +257,6 @@
       document.querySelectorAll('.filtro-btn').forEach(b => b.classList.remove('ativo'));
       btn.classList.add('ativo');
       const categoria = btn.dataset.categoria;
-
       document.querySelectorAll('.trabalho-item').forEach(item => {
         item.style.display = (categoria === 'todos' || item.dataset.categoria === categoria) ? 'block' : 'none';
       });
