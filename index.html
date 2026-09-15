@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Nicole Clemente - Social Media, Videomaker e Storymaker. Conteúdo com propósito para fortalecer sua marca.">
+<meta name="description" content="Nicole Clemente - Social Media, Videomaker e Storymaker.Do planejamento à criação, sua marca em movimento.">
 <title>Nicole Clemente | Social Media & Videomaker</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -167,7 +167,8 @@
     max-width: 900px;
     margin: 0 auto;
   }
-  .trabalho-item video { width: 100%; border-radius: 12px; }
+  .trabalho-item video,
+  .trabalho-item img { width: 100%; border-radius: 12px; display: block; }
 
   /* DEPOIMENTOS */
   .depoimentos-container { padding: 60px 20px; text-align: center; background: var(--cor-fundo-claro); }
@@ -238,14 +239,14 @@
 
 <!-- HERO -->
 <section class="hero">
-  <h1>Conteúdo com propósito, de ponta a ponta</h1>
+  <h1>Do planejamento à criação, sua marca em movimento.</h1>
   <p>Social Media, Videomaker e Storymaker</p>
 </section>
 
 <!-- SOBRE -->
 <section id="sobre" class="sobre-container">
   <div class="sobre-foto">
-    <img src="images/foto-perfil.jpg" alt="Foto de Nicole Clemente" />
+    <img src="public/img/Nicole Camera.jpg" alt="Foto de Nicole Clemente" />
   </div>
   <div class="sobre-texto">
     <h2>Sobre mim</h2>
@@ -320,22 +321,37 @@
   <h2>Meus Trabalhos</h2>
 
   <div class="filtros">
-    <button class="filtro-btn ativo" data-categoria="todos">Todos</button>
-    <button class="filtro-btn" data-categoria="reels">Reels</button>
-    <button class="filtro-btn" data-categoria="institucional">Institucional</button>
-    <button class="filtro-btn" data-categoria="ecommerce">E-commerce</button>
+    <button class="filtro-btn ativo" data-filtro="reels">Reels</button>
+    <button class="filtro-btn" data-filtro="gestao-de-redes">Gestão de redes</button>
   </div>
 
   <div class="trabalhos-grid">
-    <div class="trabalho-item" data-categoria="reels">
-      <video src="videos/reel1.mp4" controls preload="metadata"></video>
+
+    <!-- Reels -->
+    <div class="trabalho-item" data-filtro="reels">
+      <video src="public/img/video.mp4" controls preload="metadata"></video>
     </div>
-    <div class="trabalho-item" data-categoria="institucional">
-      <video src="videos/institucional1.mp4" controls preload="metadata"></video>
+    <div class="trabalho-item" data-filtro="reels">
+      <video src="public/img/Video 1.mp4" controls preload="metadata"></video>
     </div>
-    <div class="trabalho-item" data-categoria="ecommerce">
-      <video src="videos/ecommerce1.mp4" controls preload="metadata"></video>
+    <div class="trabalho-item" data-filtro="reels">
+      <video src="public/img/raissa 1v.mp4" controls preload="metadata"></video>
     </div>
+    <div class="trabalho-item" data-filtro="reels">
+      <video src="public/img/v3.mov" controls preload="metadata"></video>
+    </div>
+
+    <!-- Gestão de redes -->
+    <div class="trabalho-item" data-filtro="gestao-de-redes">
+      <img src="public/img/mar.png" alt="Print de gestão de redes" loading="lazy" />
+    </div>
+    <div class="trabalho-item" data-filtro="gestao-de-redes">
+      <img src="public/img/perfil.jpg" alt="Print de perfil" loading="lazy" />
+    </div>
+    <div class="trabalho-item" data-filtro="gestao-de-redes">
+      <img src="public/img/metricas.jpg" alt="Print de métricas" loading="lazy" />
+    </div>
+
   </div>
 </section>
 
@@ -343,16 +359,37 @@
 <section id="depoimentos" class="depoimentos-container">
   <h2>O que dizem meus clientes</h2>
   <div class="depoimentos-grid">
+
     <div class="depoimento-card">
-      <img src="images/print-cliente1.png" alt="Depoimento de Maria Silva" class="print" loading="lazy" />
-      <p class="cliente-nome">Maria Silva</p>
-      <p class="cliente-cargo">Gerente de Marketing — Empresa X</p>
+      <img src="public/img/Depi w.jpeg" alt="Depoimento de Walkiria" class="print" loading="lazy" />
+      <p class="cliente-nome">Walkiria</p>
+      <p class="cliente-cargo">Ceo — WB HAIR EXTENSION</p>
     </div>
+
     <div class="depoimento-card">
-      <img src="images/print-cliente2.png" alt="Depoimento de João Souza" class="print" loading="lazy" />
-      <p class="cliente-nome">João Souza</p>
-      <p class="cliente-cargo">Fundador — Empresa Y</p>
+      <img src="public/img/D ale.jpeg" alt="Depoimento de Alexsandra" class="print" loading="lazy" />
+      <p class="cliente-nome">Alexsandra</p>
+      <p class="cliente-cargo">Ceo — Bella Beleza</p>
     </div>
+
+    <div class="depoimento-card">
+      <img src="public/img/Depoimento raissa.jpeg" alt="Depoimento de Raissa" class="print" loading="lazy" />
+      <p class="cliente-nome">Raissa</p>
+      <p class="cliente-cargo">Ceo — Bella Beleza</p>
+    </div>
+
+    <div class="depoimento-card">
+      <img src="public/img/d norma.jpeg" alt="Depoimento de Norma Tessaro" class="print" loading="lazy" />
+      <p class="cliente-nome">Norma</p>
+      <p class="cliente-cargo">Ceo — Norma Psicologa</p>
+    </div>
+
+    <div class="depoimento-card">
+      <img src="public/img/Dwal.jpeg" alt="Depoimento de Walkiria" class="print" loading="lazy" />
+      <p class="cliente-nome">Walkiria</p>
+      <p class="cliente-cargo">Ceo - WB HAIR EXTENSION</p>
+    </div>
+
   </div>
 </section>
 
@@ -382,13 +419,18 @@
     btn.addEventListener('click', () => {
       document.querySelectorAll('.filtro-btn').forEach(b => b.classList.remove('ativo'));
       btn.classList.add('ativo');
-      const categoria = btn.dataset.categoria;
+      const categoria = btn.dataset.filtro;
 
       document.querySelectorAll('.trabalho-item').forEach(item => {
-        item.style.display = (categoria === 'todos' || item.dataset.categoria === categoria) ? 'block' : 'none';
+        item.style.display = (categoria === 'todos' || item.dataset.filtro === categoria)
+          ? ''
+          : 'none';
       });
     });
   });
+
+  // Ativa o filtro "reels" já na carga da página
+  document.querySelector('.filtro-btn.ativo')?.dispatchEvent(new Event('click'));
 </script>
 
 </body>
